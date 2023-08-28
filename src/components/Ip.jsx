@@ -14,7 +14,7 @@ const getIp = async() =>{
         const apiKey = import.meta.env.VITE_API_KEY;
         const response = await axios.get(`https://geo.ipify.org/api/v1?apiKey=${apiKey}`)
         const data = response.data; 
-        console.log(response.data)
+        //console.log(response.data)
         setIp(data.ip);
         setCity(data.location.city);
         setLat(data.location.lat);

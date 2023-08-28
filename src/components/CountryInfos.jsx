@@ -3,14 +3,14 @@ import axios from 'axios';
 
 
 const CountryInfos = () => {
-const [info, setInfo] = useState('');
+const [info, setInfo] = useState({});
 
 const getInfo = async() =>{
 
     try{
-        const {data} = await axios.get('https://restcountries.com/v3.1/name/');
-        console.log(data[2])
-        //setInfo(data[0])
+        const response = await axios.get(`https://restcountries.com/v3.1/alpha/${data.location.country}`);
+        console.log(response.data[0])
+        //setInfo(response.data)
         
     } catch (error){
     console.log(error, "Error to get a data");
@@ -23,7 +23,8 @@ useEffect(() => {
 
 
 return (
-    <div><h3></h3>
+    <div>
+    
     </div>
 
     )
