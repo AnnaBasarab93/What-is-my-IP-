@@ -7,10 +7,7 @@ import "leaflet/dist/leaflet.css";
 const Map = ({lat, lng}) => {
 const [position, setPosition] = useState(null);
 
-const icon = new Icon({
-    iconUrl: "https://as1.ftcdn.net/v2/jpg/05/24/16/84/1000_F_524168432_SwASPZ9erHRRBUR4RbI7vDU8dLwZQwvz.webp",
-    iconSize: [50, 50]
-  });
+
 
 useEffect(() => {
 setPosition([lat, lng])
@@ -27,7 +24,7 @@ return (
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={position}  icon={icon}>
+    <Marker position={position}>
     <Popup>
         You are here!
     </Popup>
