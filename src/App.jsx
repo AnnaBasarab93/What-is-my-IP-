@@ -11,7 +11,7 @@ const [lng, setLng]=useState(0);
   return (
     <>
     <h2>What's My IP?</h2>
-     <Map lat={lat} lng={lng} />
+    <Map lat={lat} lng={lng} />
       <Ip setLat={setLat} setLng={setLng}/>
       <CountryInfos />
     </>
